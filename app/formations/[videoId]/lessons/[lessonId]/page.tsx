@@ -17,14 +17,14 @@ export default async function Page(props: {
   const params = await props.params;
   const { videoId, lessonId } = params;
   const video = VIDEOS.find((video) => video.id === videoId);
-
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   if (!video) return <p>Video not found</p>;
 
   const lession = video.lessons.find((lesson) => lesson.id === lessonId);
 
   if (!lession) {
     throw new Error("Lesson not found");
-    return <p>Lesson not found</p>;
+    // return <p>Lesson not found</p>;
   }
 
   return (
