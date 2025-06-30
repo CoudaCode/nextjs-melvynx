@@ -28,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="h-full">
       <body
+        suppressHydrationWarning
         className={cn(
           geistMono.variable,
           geistSans.variable,

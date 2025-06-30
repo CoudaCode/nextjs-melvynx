@@ -1,13 +1,18 @@
-import { Card, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function Page() {
+export default async function Page(props: {
+  params: Promise<{ videoId: string; lessonId: string }>;
+}) {
   return (
     <Card>
       <CardHeader>
-        <Skeleton className="h-10 w-full" />
-        <Skeleton className="h-10 w-full" />
+        <CardTitle>
+          <Skeleton className="h-10 w-full" />
+          <Skeleton className="h-8 w-full" />
+        </CardTitle>
       </CardHeader>
+
       <CardFooter>
         <Skeleton className="h-8 w-16" />
       </CardFooter>

@@ -1,15 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { VIDEOS } from "./data";
-
+import { videos } from "./data";
 export default function Page() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Plan de formations</CardTitle>
+        <CardTitle>Module 1</CardTitle>
       </CardHeader>
+
       <CardContent className="flex flex-col gap-4">
-        {VIDEOS.map((video) => (
+        {videos.map((video) => (
           <Link
             key={video.id}
             href={`/formations/${video.id}`}

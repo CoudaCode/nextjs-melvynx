@@ -23,6 +23,12 @@
       "@app/*": ["./app/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/formations/[videoId]/[videoId]"
+  ],
   "exclude": ["node_modules"]
 }
